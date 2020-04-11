@@ -1,0 +1,9 @@
+#!/bin/bash
+sudo amazon-linux-extras install nginx1.12 -y
+sudo systemctl enable nginx --now
+sudo wget -O /usr/share/nginx/html/alexabuy.jpg https://i.redd.it/v7exkf93r34z.jpg
+sudo echo "<html><body>" > /usr/share/nginx/html/index.html
+sudo echo "<h1 id=\"demo\" style=\"color:#fff;text-align:center;background-color:DodgerBlue;\">test</h1>" >> /usr/share/nginx/html/index.html
+sudo echo "<img src=\"alexabuy.jpg\">" >> /usr/share/nginx/html/index.html
+sudo echo "<body><script>document.getElementById(\"demo\").innerHTML = \"Website Administrator <br>The goal gained - reach back, pull someone up!<br>Each one - teach one!<br>\" + window.location.hostname;</script><html>" >> /usr/share/nginx/html/index.html
+
